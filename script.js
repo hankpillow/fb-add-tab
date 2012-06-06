@@ -3,8 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function add_tab(){
-	var app_id = document.getElementById("app_id").value;
-	var redirect_uri = document.getElementById("redirect_uri").value;
-	var script = "document.location.href='https://www.facebook.com/dialog/pagetab?app_id="+app_id+"&redirect_uri="+redirect_uri+"'";
+	var app_key = document.getElementById("app_key").value;
+	var script = "document.location.href='https://www.facebook.com/add.php?api_key="+app_key+"&tab=1'";
 	chrome.tabs.executeScript(null,{code:script});
 }
